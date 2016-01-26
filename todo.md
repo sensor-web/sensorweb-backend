@@ -20,3 +20,6 @@
 6. Profile list page (hardcode)
 7. Sensor map page (use restful API 4)
 8. Sensor's raw data page (use restful API 5)
+
+### Features
+1. L10N
