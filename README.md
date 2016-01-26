@@ -1,2 +1,2 @@
-# webeverywhere-portal
-The portal website for WebEverywhere.
+# sensorweb-portal
+The portal website for SensorWeb.
