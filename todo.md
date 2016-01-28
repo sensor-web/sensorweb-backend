@@ -22,11 +22,11 @@
 }
 ```
 
-#### Devices
+#### Sensors
 ```
 {
   "profileId": "xxxxxx",
-  "deviceId": "xxxxxx",
+  "sensorId": "xxxxxx",
   "userId": "xxxxxx",
   "name": "pm2.5",
   "description": "It is about air quality.",
@@ -34,13 +34,13 @@
 }
 ```
 
-#### Device Data
+#### Sensor Data
 The table name is `deviceId`.
 ```
 {
   "datetime": "2013-08-25T17:00:00+00:00",
-  "sensor1": 11,
-  "sensor2": false
+  "value1": 11,
+  "value2": false
 }
 ```
 
@@ -51,8 +51,8 @@ The table name is `deviceId`.
   "name": "Air Quality",
   "description": "It is about air quality."
   "dataFormat": {
-    "sensor1": "Number",
-    "sensor2": "Boolean"
+    "value1": "Number",
+    "value2": "Boolean"
   }
 }
 ```
