@@ -11,6 +11,52 @@
 4. Get specific sensor's mata data
 5. Get specific sensor's raw data
 
+### Data Schema
+#### Users
+```
+{
+  "id": "xxxxxx",
+  "name": "Evan Xd",
+  "email": "evan@tseng.io",
+  "accessToken": "xxxxxxxxxxxxxxxx"
+}
+```
+
+#### Devices
+```
+{
+  "profileId": "xxxxxx",
+  "deviceId": "xxxxxx",
+  "userId": "xxxxxx",
+  "name": "pm2.5",
+  "description": "It is about air quality.",
+  "coordinate": "120.982025, 23.973875"
+}
+```
+
+#### Device Data
+The table name is `deviceId`.
+```
+{
+  "datetime": "2013-08-25T17:00:00+00:00",
+  "sensor1": 11,
+  "sensor2": false
+}
+```
+
+#### Profiles
+```
+{
+  "id": "xxxxxx",
+  "name": "Air Quality",
+  "description": "It is about air quality."
+  "dataFormat": {
+    "sensor1": "Number",
+    "sensor2": "Boolean"
+  }
+}
+```
+
 ### Webpages
 1. Landing page (hardcode)
 2. Programs page (can add a new program)
