@@ -5,11 +5,66 @@
 
 ## Tasks
 ### Restful APIs
-1. Add a new sensor for a profile
-2. Get sensor list by coordinates
-3. Push specific sensor's data (used by maker's device)
-4. Get specific sensor's mata data
-5. Get specific sensor's raw data
+* Add a new sensor for a profile.
+
+* Get sensor list by coordinates and `profileId`.
+```
+[
+  {
+    "sensorId": "xxxxxx",
+    "name": "pm2.5",
+    "description": "It is about air quality",
+    "address": "台北市信義區信義路五段106號",
+    "coordinate": "120.982025, 23.973875",
+    "currentState": {
+      "pm25": 11
+    }
+  },
+  {
+    "sensorId": "xxxxxx",
+    "name": "pm2.5",
+    "description": "It is about air quality",
+    "address": "台北市信義區信義路五段106號",
+    "coordinate": "120.982025, 23.973875",
+    "currentState": {
+      "pm25": 11
+    }
+  }
+]
+```
+
+* Push specific sensor's data (used by maker's device).
+
+* Get specific sensor's mata data. For MVP, we might not need to implement this.
+```
+{
+  "name": "pm2.5",
+  "description": "It is about air quality",
+  "address": "台北市信義區信義路五段106號",
+  "coordinate": "120.982025, 23.973875",
+  "currentState": {
+    "pm25": 11
+  }
+}
+```
+
+* Get specific sensor's raw data. For MVP, we might not need to implement this.
+```
+[
+  {
+    "datetime": "2013-08-25T17:10:00+00:00",
+    "pm25": 11
+  },
+  {
+    "datetime": "2013-08-25T17:09:00+00:00",
+    "pm25": 13
+  },
+  {
+    "datetime": "2013-08-25T17:08:00+00:00",
+    "pm25": 12
+  }
+]
+```
 
 ### Data Schema
 #### Users
