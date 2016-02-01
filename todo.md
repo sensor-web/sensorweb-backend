@@ -16,7 +16,8 @@
     "description": "It is about air quality",
     "address": "台北市信義區信義路五段106號",
     "coordinate": "120.982025, 23.973875",
-    "currentState": {
+    "latestUpdate": {
+      "datetime": "2013-08-25T17:10:00+00:00",
       "pm25": 11
     }
   },
