@@ -91,7 +91,7 @@
 ```
 
 #### Sensor Data
-The table name is `deviceId`.
+The table name is `sensorId`.
 ```
 {
   "datetime": "2013-08-25T17:00:00+00:00",
