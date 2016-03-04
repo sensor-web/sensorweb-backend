@@ -1,2 +1,2 @@
-# sensorweb-portal
-The portal website for SensorWeb.
+# sensorweb-backend
+The SensorWeb backend.
