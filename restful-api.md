@@ -1,7 +1,7 @@
 # Restful APIs
-* Add a new sensor for a program.
+## Add a new sensor for a program.
 
-* Get sensor list by coordinates and `programId`.
+## Get sensor list by coordinates and `programId`.
 ```
 [
   {
@@ -28,9 +28,11 @@
 ]
 ```
 
-* Push specific sensor's data (used by maker's device).
+## Push specific sensor's data
+Used by maker's device.
 
-* Get specific sensor's mata data. For MVP, we might not need to implement this.
+## Get specific sensor's mata data.
+For MVP, we might not need to implement this.
 ```
 {
   "name": "pm2.5",
@@ -43,7 +45,8 @@
 }
 ```
 
-* Get specific sensor's raw data. For MVP, we might not need to implement this.
+## Get specific sensor's raw data.
+For MVP, we might not need to implement this.
 ```
 [
   {
