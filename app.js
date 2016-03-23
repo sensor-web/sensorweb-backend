@@ -3,6 +3,7 @@
 var express = require('express');
 var users = require('./lib/users');
 var sensors = require('./lib/sensors');
+var projects = require('./lib/projects');
 var config = require('./config.js');
 var app = express();
 
@@ -21,6 +22,13 @@ app.route('/sensors/:id')
 app.route('/sensors/:id/data')
   .get(sensors.getSensorData)
   .post(sensors.addSensorData);
+
+app.route('/projects')
+  .get(projects.getProjects)
+  .post(projects.addProject);
+
+app.route('/projects/:id')
+  .get(projects.getProjects)
 
 app.listen(config.express.port);
 console.log('Listening on port ' + config.express.port);
