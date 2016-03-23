@@ -33,5 +33,11 @@ app.route('/projects/:userId')
 app.route('/projects/:userId/:id')
   .get(projects.getProjects);
 
+app.route('/projects/:userId/:id/sensors')
+  .get(sensors.getSensors);
+
+app.route('/projects/:userId/:id/contributors')
+  .get(users.getUsers);
+
 app.listen(config.express.port);
 console.log('Listening on port ' + config.express.port);
