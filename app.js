@@ -7,8 +7,11 @@ var projects = require('./lib/projects');
 var config = require('./config.js');
 var app = express();
 
+// The below routers are for the webpages.
 app.use(express.static('./public'));
+app.route('/:userId');
 
+// The below routers are for the REST APIs.
 app.route('/users')
   .post(users.addUser);
 
@@ -18,7 +21,7 @@ app.route('/:userId/sensors')
 app.route('/sensors')
   .post(sensors.addSensor);
 
-app.route('/sensors/:id')
+app.route('/sensors/:sensorId')
   .get(sensors.getSensors);
 
 app.route('/sensors/:id/data')
