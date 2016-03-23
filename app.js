@@ -27,8 +27,11 @@ app.route('/projects')
   .get(projects.getProjects)
   .post(projects.addProject);
 
-app.route('/projects/:id')
-  .get(projects.getProjects)
+app.route('/projects/:userId')
+  .get(projects.getProjects);
+
+app.route('/projects/:userId/:id')
+  .get(projects.getProjects);
 
 app.listen(config.express.port);
 console.log('Listening on port ' + config.express.port);
