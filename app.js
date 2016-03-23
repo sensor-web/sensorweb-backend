@@ -12,6 +12,9 @@ app.use(express.static('./public'));
 app.route('/users')
   .post(users.addUser);
 
+app.route('/users/:id/sensors')
+  .get(sensors.getSensors);
+
 app.route('/sensors')
   .get(sensors.getSensors)
   .post(sensors.addSensor);
