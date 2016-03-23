@@ -16,11 +16,10 @@ app.route('/users/:id/sensors')
   .get(sensors.getSensors);
 
 app.route('/sensors')
-  .get(sensors.getSensors)
   .post(sensors.addSensor);
 
 app.route('/sensors/:id')
-  .get(sensors.getSensor);
+  .get(sensors.getSensors);
 
 app.route('/sensors/:id/data')
   .get(sensors.getSensorData)
