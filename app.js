@@ -12,7 +12,7 @@ app.use(express.static('./public'));
 app.route('/users')
   .post(users.addUser);
 
-app.route('/users/:id/sensors')
+app.route('/:userId/sensors')
   .get(sensors.getSensors);
 
 app.route('/sensors')
@@ -29,7 +29,7 @@ app.route('/projects')
   .get(projects.getProjects)
   .post(projects.addProject);
 
-app.route('/projects/:userId')
+app.route('/projects/:id')
   .get(projects.getProjects);
 
 app.route('/projects/:userId/:id')
