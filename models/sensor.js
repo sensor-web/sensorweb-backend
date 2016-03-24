@@ -8,7 +8,9 @@ var sensorSchema = new Schema({
   projectId: String,
   name: String,
   description: String,
-  coords: String
+  coords: String,
+  latestUpdate: String,
+  pm25Value: Number
 });
 
 var Sensor = mongoose.model('Sensor', sensorSchema);
