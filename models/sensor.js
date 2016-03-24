@@ -10,7 +10,7 @@ var sensorSchema = new Schema({
   description: String,
   coords: String,
   latestUpdate: String,
-  pm25Value: Number
+  pm25Index: Number
 });
 
 var Sensor = mongoose.model('Sensor', sensorSchema);
