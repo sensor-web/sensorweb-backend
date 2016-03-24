@@ -9,7 +9,7 @@ var projects = require('./lib/projects');
 var config = require('./config.js');
 var app = express();
 
-app.use(express.static('./public'));
+app.use(express.static('./sensorweb-frontend'));
 
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
