@@ -28,7 +28,7 @@ db.once('open', function() {
   app.route('/sensors/:sensorId')
     .get(sensors.getSensors);
 
-  app.route('/sensors/:id/data')
+  app.route('/sensors/:sensorId/data')
     .get(sensors.getSensorData)
     .post(sensors.addSensorData);
 
