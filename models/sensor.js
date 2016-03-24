@@ -5,10 +5,10 @@ var Schema = mongoose.Schema;
 
 var sensorSchema = new Schema({
   userId: String,
-  programId: String,
+  projectId: String,
   name: String,
   description: String,
-  coordinate: String
+  coords: String
 });
 
 var Sensor = mongoose.model('Sensor', sensorSchema);

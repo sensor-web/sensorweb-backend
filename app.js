@@ -9,6 +9,8 @@ var projects = require('./lib/projects');
 var config = require('./config.js');
 var app = express();
 
+app.use(express.static('./public'));
+
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
 
@@ -27,10 +29,12 @@ db.once('open', function() {
   app.route('/sensors/:id/data')
     .get(sensors.getSensorData)
     .post(sensors.addSensorData);
+
+  app.route('/projects/:userId/:projectId/sensors')
+    .get(sensors.getSensors);
 });
 
 // The below routers are for the webpages.
-app.use(express.static('./public'));
 app.route('/:userId');
 
 // The below routers are for the REST APIs.
@@ -46,9 +50,6 @@ app.route('/projects/:id')
 
 app.route('/projects/:userId/:id')
   .get(projects.getProjects);
-
-app.route('/projects/:userId/:id/sensors')
-  .get(sensors.getSensors);
 
 app.route('/projects/:userId/:id/contributors')
   .get(users.getUsers);
