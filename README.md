@@ -1,4 +1,4 @@
-# Front-end Module of SensorWeb
+# Back-end Module of SensorWeb
 The back-end module of [SensorWeb](https://wiki.mozilla.org/SensorWeb).
 
 ## Maintainers
