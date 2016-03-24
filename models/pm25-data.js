@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var pm25Data = new Schema({
-  datatime: Date,
+  datetime: Date,
   sensorId: String,
   pm25Index: Number
 });
