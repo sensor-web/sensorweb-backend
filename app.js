@@ -2,6 +2,7 @@
 
 var express = require('express');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 var users = require('./lib/users');
 var sensors = require('./lib/sensors');
@@ -10,6 +11,7 @@ var config = require('./config.js');
 var app = express();
 
 app.use(express.static('./sensorweb-frontend'));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
