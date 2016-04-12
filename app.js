@@ -18,9 +18,8 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  app.route('/:userId/sensors')
-    .get(sensors.getSensors);
-
+  // app.route('/:userId/sensors')
+  //   .get(sensors.getSensors);
   app.route('/sensors')
     .get(sensors.getSensors)
     .post(sensors.addSensor);
@@ -41,14 +40,14 @@ db.once('open', function() {
   app.route('/projects/:userId/:projectName/contributors')
     .get(projects.getContributors);
 
-  app.route('/:userId/sensors')
+  app.route('/users/:userId')
+    .get(users.getUserData);
+
+  app.route('/users/:userId/sensors')
     .get(sensors.getSensors);
 
-  app.route('/:userId/projects')
+  app.route('/users/:userId/projects')
     .get(projects.getProjects);
-
-  app.route('/:userId')
-    .get(users.getUserData);
 });
 
 // The below routers are for the REST APIs.
