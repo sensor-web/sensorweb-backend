@@ -9,6 +9,7 @@ var sensorSchema = new Schema({
   name: String,
   description: String,
   coords: String,
+  address: String,
   latestUpdate: String,
   pm25Index: Number
 });
