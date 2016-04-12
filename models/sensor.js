@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 var sensorSchema = new Schema({
   userId: String,
-  projectId: String,
+  projectKey: { creatorId: String, projectName: String },
   name: String,
   description: String,
   coords: { lng: String, lat: String },

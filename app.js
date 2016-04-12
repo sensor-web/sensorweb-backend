@@ -18,11 +18,9 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
+  // Get all sensors API is only for testing.
   app.route('/sensors')
     .get(sensors.getSensors)
-    // TODO: Move below post into the
-    // `/projects/:userId/:projectName/sensors` router.
-    .post(sensors.addSensor);
 
   app.route('/sensors/:sensorId')
     .get(sensors.getSensors)
@@ -37,7 +35,8 @@ db.once('open', function() {
     .get(projects.getProjects);
 
   app.route('/projects/:userId/:projectName/sensors')
-    .get(sensors.getSensors);
+    .get(sensors.getSensors)
+    .post(sensors.addSensor);
 
   app.route('/projects/:userId/:projectName/contributors')
     .get(projects.getContributors)
