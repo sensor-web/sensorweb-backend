@@ -35,6 +35,9 @@ db.once('open', function() {
   app.route('/projects/:userId/:projectId/sensors')
     .get(sensors.getSensors);
 
+  app.route('/projects/:userId/:projectName/contributors')
+    .get(projects.getContributors);
+
   app.route('/:userId/sensors')
     .get(sensors.getSensors);
 
@@ -46,21 +49,21 @@ db.once('open', function() {
 });
 
 // The below routers are for the REST APIs.
-app.route('/users')
-  .post(users.addUser);
+// app.route('/users')
+//   .post(users.addUser);
 
-app.route('/projects')
-  .get(projects.getProjects)
-  .post(projects.addProject);
+// app.route('/projects')
+//   .get(projects.getProjects)
+//   .post(projects.addProject);
 
-app.route('/projects/:id')
-  .get(projects.getProjects);
+// app.route('/projects/:id')
+//   .get(projects.getProjects);
 
-app.route('/projects/:userId/:id')
-  .get(projects.getProjects);
+// app.route('/projects/:userId/:id')
+//   .get(projects.getProjects);
 
-app.route('/projects/:userId/:id/contributors')
-  .get(users.getUsers);
+// app.route('/projects/:userId/:id/contributors')
+//   .get(users.getUsers);
 
 app.listen(config.express.port);
 console.log('Listening on port ' + config.express.port);
