@@ -8,7 +8,7 @@ var sensorSchema = new Schema({
   projectId: String,
   name: String,
   description: String,
-  coords: String,
+  coords: { lng: String, lat: String },
   address: String,
   latestUpdate: String,
   pm25Index: Number
