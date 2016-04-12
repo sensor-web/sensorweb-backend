@@ -25,7 +25,9 @@ db.once('open', function() {
     .post(sensors.addSensor);
 
   app.route('/sensors/:sensorId')
-    .get(sensors.getSensors);
+    .get(sensors.getSensors)
+    .put(sensors.editSensor)
+    .delete(sensors.deleteSensor);
 
   app.route('/sensors/:sensorId/data')
     .get(sensors.getSensorData)
