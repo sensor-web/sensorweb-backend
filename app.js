@@ -37,6 +37,9 @@ db.once('open', function() {
 
   app.route('/:userId/sensors')
     .get(sensors.getSensors);
+
+  app.route('/:userId/projects')
+    .get(projects.getProjects);
 });
 
 // The below routers are for the webpages.
