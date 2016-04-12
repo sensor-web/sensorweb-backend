@@ -35,7 +35,7 @@ db.once('open', function() {
   app.route('/projects/:userId/:projectName')
     .get(projects.getProjects);
 
-  app.route('/projects/:userId/:projectId/sensors')
+  app.route('/projects/:userId/:projectName/sensors')
     .get(sensors.getSensors);
 
   app.route('/projects/:userId/:projectName/contributors')
