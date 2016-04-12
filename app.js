@@ -40,10 +40,10 @@ db.once('open', function() {
 
   app.route('/:userId/projects')
     .get(projects.getProjects);
-});
 
-// The below routers are for the webpages.
-app.route('/:userId');
+  app.route('/:userId')
+    .get(users.getUserData);
+});
 
 // The below routers are for the REST APIs.
 app.route('/users')
