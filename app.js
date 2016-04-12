@@ -32,6 +32,9 @@ db.once('open', function() {
     .get(sensors.getSensorData)
     .post(sensors.addSensorData);
 
+  app.route('/projects/:userId/:projectName')
+    .get(projects.getProjects);
+
   app.route('/projects/:userId/:projectId/sensors')
     .get(sensors.getSensors);
 
