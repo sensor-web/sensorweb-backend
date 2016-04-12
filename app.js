@@ -20,6 +20,8 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   app.route('/sensors')
     .get(sensors.getSensors)
+    // TODO: Move below post into the
+    // `/projects/:userId/:projectName/sensors` router.
     .post(sensors.addSensor);
 
   app.route('/sensors/:sensorId')
