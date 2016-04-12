@@ -37,6 +37,7 @@ db.once('open', function() {
 
   app.route('/projects/:userId/:projectName/contributors')
     .get(projects.getContributors);
+    .post(projects.addContributor);
 
   app.route('/users')
     .post(users.addUser);
