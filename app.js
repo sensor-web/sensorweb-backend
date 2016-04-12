@@ -38,7 +38,7 @@ db.once('open', function() {
     .get(sensors.getSensors);
 
   app.route('/projects/:userId/:projectName/contributors')
-    .get(projects.getContributors);
+    .get(projects.getContributors)
     .post(projects.addContributor);
 
   app.route('/users')
