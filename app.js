@@ -42,7 +42,7 @@ db.once('open', function() {
     .get(projects.getContributors);
 
   app.route('/users')
-    .get(users.getUserData)
+    .get(users.getUserData) // Get user data by email: `/users?email=[USER_EMAIL]`.
     .post(users.addUser);
 
   app.route('/users/:userId')
