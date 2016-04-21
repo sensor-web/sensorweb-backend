@@ -1,6 +1,19 @@
 {
-  "name": "sensorweb-portal",
+  "name": "sensorweb-backend",
+  "description": "The SensorWeb back-end.",
   "version": "0.0.1",
+  "author": {
+    "name": "Evan Tseng",
+    "email": "evan@tseng.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanxd/sensorweb-backend"
+  },
+  "keyword": [
+    "sensorweb"
+  ],
   "dependencies": {
     "body-parser": "1.15.0",
     "express": "4.13.4",
