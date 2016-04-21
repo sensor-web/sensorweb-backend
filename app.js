@@ -10,7 +10,7 @@ var projects = require('./lib/projects');
 var config = require('./config.js');
 var app = express();
 
-app.use(express.static('./sensorweb-frontend'));
+// app.use(express.static('./sensorweb-frontend'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 mongoose.connect('mongodb://localhost/test');
@@ -18,6 +18,14 @@ var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
+  app.route('/').get(function(req, res, next) {
+    res.jsonp({
+      version: config.version,
+      description: config.description,
+      status: 'good'
+    });
+  });
+
   // Get all sensors API is only for testing.
   app.route('/sensors')
     .get(sensors.getSensors)
