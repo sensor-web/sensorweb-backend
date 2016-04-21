@@ -12,6 +12,12 @@ var app = express();
 
 config.dev && app.use(express.static('./sensorweb-frontend'));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 mongoose.connect('mongodb://localhost/test');
 var db = mongoose.connection;
