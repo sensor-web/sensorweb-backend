@@ -10,7 +10,7 @@ var projects = require('./lib/projects');
 var config = require('./config.js');
 var app = express();
 
-// app.use(express.static('./sensorweb-frontend'));
+config.dev && app.use(express.static('./sensorweb-frontend'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 mongoose.connect('mongodb://localhost/test');
@@ -28,7 +28,7 @@ db.once('open', function() {
 
   // Get all sensors API is only for testing.
   app.route('/sensors')
-    .get(sensors.getSensors)
+    .get(sensors.getSensors);
 
   app.route('/sensors/:sensorId')
     .get(sensors.getSensors)
@@ -50,7 +50,8 @@ db.once('open', function() {
     .get(projects.getContributors);
 
   app.route('/users')
-    .get(users.getUserData) // Get user data by email: `/users?email=[USER_EMAIL]`.
+    // Get user data by email: `/users?email=[USER_EMAIL]`.
+    .get(users.getUserData)
     .post(users.addUser);
 
   app.route('/users/:userId')

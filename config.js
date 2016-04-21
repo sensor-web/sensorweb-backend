@@ -6,5 +6,6 @@ module.exports = {
   express: {
     port: 8081
   },
-  closedBeta: true
+  closedBeta: true,
+  dev: false
 };
