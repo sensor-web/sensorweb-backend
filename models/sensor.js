@@ -1,9 +1,14 @@
 'use strict';
 
+var shortid = require('shortid');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var sensorSchema = new Schema({
+  _id: {
+    type: String,
+    'default': shortid.generate
+  },
   userId: String,
   projectKey: { creatorId: String, projectName: String },
   name: String,
