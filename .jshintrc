@@ -1,5 +1,6 @@
 {
   "strict": true,
+  "esnext": true,
   "node": true,
   "maxlen": 80,
   "-W030": true
