@@ -15,6 +15,7 @@ var sensorSchema = new Schema({
   description: String,
   coords: { lng: String, lat: String },
   address: String,
+  createDate: { type: Date, default: Date.now },
   latestUpdate: String,
   pm25Index: Number
 });
