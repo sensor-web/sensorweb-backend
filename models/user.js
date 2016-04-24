@@ -7,6 +7,7 @@ var schema = new Schema({
   userId: String,
   name: String,
   email: String,
+  publicEmail: String,
   picture: String,
   createDate: { type: Date, default: Date.now }
 });
