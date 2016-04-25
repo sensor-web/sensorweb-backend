@@ -32,10 +32,6 @@ db.once('open', function() {
     });
   });
 
-  // Get all sensors API is only for testing.
-  app.route('/sensors')
-    .get(sensors.getSensors);
-
   app.route('/sensors/:sensorId')
     .get(sensors.getSensors)
     .put(sensors.editSensor)
